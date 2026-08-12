@@ -9,7 +9,7 @@ description = "Unofficial MCP server for PropertyGuru Singapore & Malaysia prope
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
-authors = [{ name = "kuo.chen" }]
+authors = [{ name = "kkukoo" }]
 keywords = ["propertyguru", "mcp", "model-context-protocol", "real-estate", "singapore", "malaysia", "scraping"]
 classifiers = [
     "Development Status :: 3 - Alpha",
@@ -33,9 +33,9 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/kuochen/propertyguru-mcp"
-Repository = "https://github.com/kuochen/propertyguru-mcp"
-Issues = "https://github.com/kuochen/propertyguru-mcp/issues"
+Homepage = "https://github.com/kkukoo/propertyguru-mcp"
+Repository = "https://github.com/kkukoo/propertyguru-mcp"
+Issues = "https://github.com/kkukoo/propertyguru-mcp/issues"
 
 [project.scripts]
 propertyguru-mcp = "propertyguru_mcp.__main__:main"
