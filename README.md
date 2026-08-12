@@ -1,5 +1,10 @@
 # propertyguru-mcp
 
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![MCP](https://img.shields.io/badge/MCP-compatible-brightgreen)](https://modelcontextprotocol.io)
+[![Tests](https://img.shields.io/badge/tests-9%20passed-brightgreen)]()
+
 > **Unofficial** MCP ([Model Context Protocol](https://modelcontextprotocol.io)) server that exposes **PropertyGuru Singapore & Malaysia** listing search as MCP tools. No API key. No subscription. One HTTP request per query.
 
 ---
@@ -121,7 +126,7 @@ Cheap probe returning only the count for a search (use to size a query before fe
 
 ```bash
 # Clone and install
-git clone https://github.com/kuochen/propertyguru-mcp.git
+git clone https://github.com/kkukoo/propertyguru-mcp.git
 cd propertyguru-mcp
 
 # Option A: uv (recommended)
