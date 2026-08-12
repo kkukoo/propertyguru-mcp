@@ -1,0 +1,47 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "propertyguru-mcp"
+version = "0.1.0"
+description = "Unofficial MCP server for PropertyGuru Singapore & Malaysia property listings — searches Next.js SSR data (no auth, no API key)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "kuo.chen" }]
+keywords = ["propertyguru", "mcp", "model-context-protocol", "real-estate", "singapore", "malaysia", "scraping"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+    "Topic :: Software Development :: Libraries",
+]
+dependencies = [
+    "mcp>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/kuochen/propertyguru-mcp"
+Repository = "https://github.com/kuochen/propertyguru-mcp"
+Issues = "https://github.com/kuochen/propertyguru-mcp/issues"
+
+[project.scripts]
+propertyguru-mcp = "propertyguru_mcp.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/propertyguru_mcp"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
