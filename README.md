@@ -252,19 +252,6 @@ async with MCPServerStdio(
 
 ---
 
-## Why I built this instead of paying for a third-party API
-
-I tried the popular "PropertyGuru RealtimeAPI" on RapidAPI ($20-100/mo). Findings:
-
-- Their **9-parameter search has 6 silently-broken parameters** (verified by identical responses with different inputs). Only `page`, `listing_type`, `property_type` actually work.
-- They just **proxy PropertyGuru's `__NEXT_DATA__` HTML** without parsing. You get the same 897 KB raw blob PropertyGuru would have sent you directly.
-- Latency ~5 s per query (extra hop through their relay), no caching.
-- No autocomplete endpoint, no detail endpoint, no sorting.
-
-This MCP does the same thing they do — but **locally**, with **correct parameter spelling** (so filters actually work) and **no fee**.
-
----
-
 ## Known limitations
 
 - **Single-page responses (25 listings)**. PropertyGuru's `&page=N` query-string is unreliable from non-browser User-Agents (Cloudflare blocks intermittently). Path-style `/{region}/property-for-sale/2` works but is untested in the server. If you need > 25 listings, run multiple freetexts / districts and merge client-side.
